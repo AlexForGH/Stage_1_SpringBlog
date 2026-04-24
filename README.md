@@ -3,8 +3,8 @@
 ![Демо работы](./demo.gif)
 
 ## *EN*
-#### A simple project to demonstrate basic development capabilities using the Spring framework
-#### Technology stack: Spring Framework, H2DB, HTML, Thymeleaf, Junit5, Mockito
+#### A simple project to demonstrate basic development capabilities using the Spring framework using Spring Boot
+#### Technology stack: Spring Framework, Spring Boot, H2DB, HTML, Thymeleaf, Junit5, Mockito
 
 ### Application features:
     - adding posts
@@ -17,38 +17,33 @@
 
 ### Application deployment:
     - Before you begin, you'll need:
-              - Tomcat Server (version 10.1.26 was used during project development): download the archive
-                from the official website and unzip it to a convenient location
-              - Java (JRE) (version 22 was used during project development)
+            - Java (JRE) (version 23 was used during project development)
     1. Using an IDE (IntelliJIdea was used during project development):
             - clone the repository
             - open the project in the IDE
-            - create and configure the Tomcat Server configuration -> local
-            - run the configured configuration
-            - the application's start page will open in the browser
-            - stop the application in the IDE when finished
-    2. Without using an IDE
-            - clone the repository
-            - enter the command in the root of the project folder: ./mvnw clean package
-            - a file app-1.0-SNAPSHOT.war will appear in the folder /app/target
-            - copy this file to the Tomcat Server folder: /tomcat/webapps
-            - run the startup.sh script in the /tomcat/bin folder. This will start the server and deploy the application
-            - open a browser at http://localhost:8080/app-1.0-SNAPSHOT/posts
+            - run the command to build the executable Uber-Jar: ./mvnw clean package spring-boot:repackage
+            - in the resulting target directory, run the executable file: ./Stage_1_SpringBlog-0.0.1-SNAPSHOT.jar
+            - open a browser at http://localhost:8080/posts
             - the application's start page will open
-            - when finished, run the shutdown.sh script in the /tomcat/bin folder to stop the application
+    2. Without an IDE
+            - clone the repository
+            - in the root directory Run the command to build the executable Uber-Jar from the project folder: ./mvnw clean package spring-boot:repackage
+            - in the resulting target directory, run the executable: ./Stage_1_SpringBlog-0.0.1-SNAPSHOT.jar
+            - open a browser and navigate to http://localhost:8080/posts
+            - the application's start page will open
 
 ### Testing the application:
     1. Using an IDE (IntelliJIdea was used during project development):
-            - right-click on the test folder and select "Run Tests in 'SimpleSpringBlog'"
-            - all tests in the project will run
-    2. Without an IDE
-            - open a terminal in the project folder and enter the command: ./mvnw test
-            - all tests in the project will run
+        - right-click on the test folder and select "Run Tests in 'SimpleSpringBootBlog'"
+        - all project tests will run.
+    2. Without an IDE:
+        - open a terminal in the project folder and enter the command: ./mvnw test
+        - all project tests will run.z
 
 
 ## *RU*
-#### Простой проект для демонстрации базовых возможностей разработки с использованием фреймворка Spring
-#### Технологический стек: Spring Framework, H2DB, HTML, Thymeleaf, Junit5, Mockito
+#### Простой проект для демонстрации базовых возможностей разработки с использованием фреймворка Spring с использованием Spring Boot
+#### Технологический стек: Spring Framework, Spring Boot, H2DB, HTML, Thymeleaf, Junit5, Mockito
 
 ### Возможности приложения:
     - добавление постов
@@ -61,29 +56,24 @@
 
 ### Развертывание приложения:
     - Перед началом работы необходимы:
-            - Tomcat Server (при разработке проекта использовалась версия 10.1.26): скачать архив
-              с официального сайта и распаковать в удобное место
-            - Java (JRE) (при разработке проекта использовалась версия 22)
+            - Java (JRE) (при разработке проекта использовалась версия 23)
     1. Через IDE (при разработке проекта использовалась IntelliJIdea):
             - клонировать репозиторий
             - открыть проект в IDE
-            - создать и настроить конфигурацию Tomcat Server -> local
-            - запустить настроенную конфигурацию
-            - в браузере откроется стартовая страница приложения
-            - по завершению работы остановить приложение в IDE
+            - выполнить команду для сборки исполняемого Uber-Jar: ./mvnw clean package spring-boot:repackage
+            - в появившейся директории target выполнить запуск исполняемого файла: ./Stage_1_SpringBlog-0.0.1-SNAPSHOT.jar
+            - зайти в браузер по адресу http://localhost:8080/posts
+            - откроется стартовая страница приложения
     2. Без использования IDE
             - клонировать репозиторий
-            - в корне папки проекта ввести команду: ./mvnw clean package
-            - в папке /app/target появится файл app-1.0-SNAPSHOT.war
-            - скопировать данный файл в папку Tomcat Server: /tomcat/webapps
-            - в папке /tomcat/bin выполнить скрипт startup.sh - запустится сервер и развернется приложение
-            - зайти в браузер по адресу http://localhost:8080/app-1.0-SNAPSHOT/posts
+            - в корне папки проекта выполнить команду для сборки исполняемого Uber-Jar: ./mvnw clean package spring-boot:repackage
+            - в появившейся директории target выполнить запуск исполняемого файла: ./Stage_1_SpringBlog-0.0.1-SNAPSHOT.jar
+            - зайти в браузер по адресу http://localhost:8080/posts
             - откроется стартовая страница приложения
-            - по завершению работы в папке /tomcat/bin выполнить скрипт shutdown.sh для остановки приложения
 
 ### Тестирование приложения:
     1. Через IDE (при разработке проекта использовалась IntelliJIdea):
-            - на папке test нажать ПКМ и выбрать пункт "Run Tests in 'SimpleSpringBlog'"
+            - на папке test нажать ПКМ и выбрать пункт "Run Tests in 'SimpleSpringBootBlog'"
             - запустятся все тесты проекта
     2. Без использования IDE
             - в папке проекта вызвать терминал и ввести команду: ./mvnw test
